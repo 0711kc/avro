@@ -25,7 +25,7 @@ src/
 
 ### 1. 이 레포를 포크해서 서브모듈로 추가합니다.
    ```bash
-   git submodule add https://github.com/Team-Project-MSA-InnerArchitecture/avro.git(포크받은 주소) src/main/avro-schemas
+   git submodule add https://github.com/Team-Project-MSA-InnerArchitecture/avro.git(포크받은 주소) src/main/avro
    ```
 
 ### 2. 빌드 도구에 설정을 추가합니다. (gradle 예시)
@@ -59,7 +59,7 @@ src/
 
 - Spring Boot DevTools는 개발 편의성용 자동 리스타트 도구입니다.
 - 하지만 Kafka 및 Avro 환경에서는 클래스 로딩 방식 때문에 ClassCastException이 발생합니다.
-- `build.gradle`에서 반드시 주석 처리 또는 제거해주세요!!!
+- `build.gradle`에서 반드시 주석 처리 또는 제거해주세요!!
 
 ```groovy
 // ✅ 반드시 주석 처리하거나 삭제할 것!
@@ -131,4 +131,4 @@ public class TestEvent extends SpecificRecordBase {
 ## 🔗 참고
 
 - [Confluent Schema Registry Docs](https://docs.confluent.io/platform/current/schema-registry/index.html)
-- [Avro Specification](https://avro.apache.org/docs/current/spec.html)
+- [Avro Specification](https://avro.apache.org/docs/1.11.1/getting-started-java/)
